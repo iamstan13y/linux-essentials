@@ -12,3 +12,4 @@
 
 1. **You gonna need to publish your app to a folder, using Visual Studio (or whatever IDE you're using) and navigate to the folder.**
 
+![Screenshot 2023-02-01 110216](https://user-images.githubusercontent.com/46853837/215998278-a5deccd2-85db-4a7a-b05f-474d2f1a9f33.png)
