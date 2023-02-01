@@ -21,5 +21,4 @@
 `rm packages-microsoft-prod.deb`
    * `sudo apt-get update && \`<br/>
   `sudo apt-get install -y dotnet-sdk-6.0`
-  
   You can also refer to [this stuff here](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#2004) for the latest and detailed guide on installing the SDK.
