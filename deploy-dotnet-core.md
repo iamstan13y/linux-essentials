@@ -57,8 +57,10 @@ WantedBy=multi-user.target
 ```
 Save and exit the editor and continue on the next step.
 
-6. Restart the service daemon:
-   `sudo systemctl daemon-reload`
-   `sudo systemctl enable yourappname.service`
-   `sudo systemctl start yourappname`
+6. Restart the service daemon:<br/>
+   `sudo systemctl daemon-reload`<br/>
+   `sudo systemctl enable yourappname.service`<br/>
+   `sudo systemctl start yourappname`<br/>
    `sudo systemctl status yourappname`
+
+That's it!
