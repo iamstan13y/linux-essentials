@@ -24,6 +24,33 @@
   `sudo apt-get install -y dotnet-sdk-6.0`<br/>
   You can also refer to [this stuff here](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#2004) for the latest and detailed guide on installing the SDK.
 
-  4. Navigate to your app folder using `cd /var/www/your-app-folder/` and run the following commands to update the file permissions:
+  4. Navigate to your app folder using `cd /var/www/your-app-folder/` and run the following commands to update the file permissions:<br/>
    `sudo chmod 755 *`<br/>
    `sudo chown -R $USER:$USER *`
+
+   5. Next, create your app as a service:
+   `sudo nano /etc/systemd/system/yourappname.service`
+   In the newly created file, paste the following:
+
+
+   ```bash
+   [Unit]
+Description=Some fancy description here
+
+[Service]
+WorkingDirectory=/var/www/your-app-folder
+ExecStart=/usr/bin/dotnet /var/www/your-app-folder/YourApp.dll
+Restart=always
+# Restart service after 10 seconds if the dotnet service crashes:
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=yourappname
+User=root
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+# If you need to run multiple services on different ports set the ports environment variable here:
+Environment=ASPNETCORE_URLS=
+
+[Install]
+WantedBy=multi-user.target
+```
