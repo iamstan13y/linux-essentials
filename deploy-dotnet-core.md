@@ -55,3 +55,10 @@ Environment=ASPNETCORE_URLS=192.168.10.47:4041
 [Install]
 WantedBy=multi-user.target
 ```
+Save and exit the editor and continue on the next step.
+
+6. Restart the service daemon:
+   `sudo systemctl daemon-reload`
+   `sudo systemctl enable yourappname.service`
+   `sudo systemctl start yourappname`
+   `sudo systemctl status yourappname`
