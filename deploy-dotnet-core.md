@@ -16,10 +16,10 @@
 
 2. **Create a folder in your Ubuntu server *(preferably under `/var/www/`)* and upload your published files to this folder using a tool of your choice.**
 3. ***(Assuming you're already logged in via ssh, and you don't have .NET SDK installed yet)* Install latest version the .NET SDK using the following commands:**
-   * `wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb`
-`sudo dpkg -i packages-microsoft-prod.deb`
+   * `wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb`<br/>
+`sudo dpkg -i packages-microsoft-prod.deb`<br/>
 `rm packages-microsoft-prod.deb`
-   * `sudo apt-get update && \`
+   * `sudo apt-get update && \`<br/>
   `sudo apt-get install -y dotnet-sdk-6.0`
   
   You can also refer to [this stuff here](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#2004) for the latest and detailed guide on installing the SDK.
