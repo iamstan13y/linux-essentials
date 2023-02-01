@@ -50,7 +50,7 @@ User=root
 Environment=ASPNETCORE_ENVIRONMENT=Production
 Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
 # If you need to run multiple services on different ports set the ports environment variable here (Format: {IP_ADDRESS:PORT} or www.yourdomain.com) 
-Environment=ASPNETCORE_URLS=192.168.10.47:
+Environment=ASPNETCORE_URLS=192.168.10.47:4041
 
 [Install]
 WantedBy=multi-user.target
