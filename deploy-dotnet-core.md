@@ -41,6 +41,7 @@ Description=Some fancy description here
 WorkingDirectory=/var/www/your-app-folder
 ExecStart=/usr/bin/dotnet /var/www/your-app-folder/YourApp.dll
 Restart=always
+
 # Restart service after 10 seconds if the dotnet service crashes:
 RestartSec=10
 KillSignal=SIGINT
@@ -48,8 +49,8 @@ SyslogIdentifier=yourappname
 User=root
 Environment=ASPNETCORE_ENVIRONMENT=Production
 Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
-# If you need to run multiple services on different ports set the ports environment variable here:
-Environment=ASPNETCORE_URLS=
+# If you need to run multiple services on different ports set the ports environment variable here (Format: {IP_ADDRESS:PORT} or www.yourdomain.com) 
+Environment=ASPNETCORE_URLS=192.168.10.47:
 
 [Install]
 WantedBy=multi-user.target
