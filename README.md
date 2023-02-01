@@ -7,3 +7,5 @@
 <br/>
 
 ## Table of Contents
+## Contributions
+Feel free to make contribute to this repository. Make your own fork, add some cool stuff, and open a pull request!
